@@ -1,66 +1,65 @@
 <div class="card border-primary ">
     <div class="card-header">Registrar Cliente</div>
-      <!--Input Size-->
-					            <!--===================================================-->
-					            <form class="form-horizontal">
-					                <div class="panel-body">
+    <!--Input Size-->
+    <!--===================================================-->
+    <form class="form-horizontal" [formGroup]="forma" (ngSubmit)="guardar()">
+        <div class="panel-body">
 
+            <div class="row align-items-start">
+                <div class="col">
+                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Nombres</label>
+                    <div class="col-sm-12">
+                        <input class="form-control" type="text" placeholder="Ingrese Nombres" formControlName="name">
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Apellidos</label>
+                    <div class="col-sm-12">
+                        <input class="form-control" type="text" placeholder="Ingrese Apellidos"
+                            formControlName="lastName">
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Teléfono</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" placeholder="Ingrese Teléfono" formControlName="phone">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row align-items-start">
+                <div class="col">
+                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Dirección</label>
+                    <div class="col-sm-12">
+                        <input class="form-control" type="text" placeholder="Ingrese Dirección"
+                            formControlName="address">
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Correo</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="text" placeholder="Ingrese email" formControlName="email">
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">...</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="demo-is-inputnormal">
+                    </div>
+                </div>
+            </div>
 
-                                        <div class="">
-                                            <div class="row align-items-start">
-                                                <div class="col">
-                                                        <label for="demo-is-inputnormal" class="col-sm-3 control-label">Nombres</label>
-                                                        <div class="col-sm-12">
-                                                            <input type="text" class="form-control" id="demo-is-inputnormal">
-                                                        </div>
-                                                </div>
-                                                <div class="col">
-                                                        <label for="demo-is-inputnormal" class="col-sm-3 control-label">Apellidos</label>
-                                                        <div class="col-sm-12">
-                                                            <input type="text" class="form-control" id="demo-is-inputnormal">
-                                                        </div>
-                                                </div>
-                                                <div class="col">
-                                                        <label for="demo-is-inputnormal" class="col-sm-3 control-label">Teléfono</label>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" class="form-control" id="demo-is-inputnormal">
-                                                        </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="row align-items-start">
-                                                <div class="col">
-                                                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Dirección</label>
-                                                    <div class="col-sm-12">
-                                                        <input type="text" class="form-control" id="demo-is-inputnormal">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                        <label for="demo-is-inputnormal" class="col-sm-3 control-label">Correo</label>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" class="form-control" id="demo-is-inputnormal">
-                                                        </div>
-                                                </div>
-                                                <div class="col">
-                                                        <label for="demo-is-inputnormal" class="col-sm-3 control-label">...</label>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" class="form-control" id="demo-is-inputnormal">
-                                                        </div>
-                                                </div>
-                                            </div>
-                                          </div>
-					                </div>
-					                <div class="panel-footer">
-					                    <div class="row">
-					                        <div class="col-sm-9 col-sm-offset-3">
-					                            <button class="btn btn-mint m-3" type="submit">Guardar</button>
-					                            <button class="btn btn-danger m-3" type="reset" [routerLink]="['/client']">Cancelar</button>
-					                        </div>
-					                    </div>
-					                </div>
-					            </form>
-					            <!--===================================================-->
-					            <!--End Input Size-->
-    
-  </div>
-  
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <button class="btn btn-mint m-3" type="submit">Guardar</button>
+                    <button class="btn btn-danger m-3" type="reset" [routerLink]="['/client']">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--===================================================-->
+    <!--End Input Size-->
+
+</div>

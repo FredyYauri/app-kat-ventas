@@ -11,6 +11,8 @@ import { OrderComponent } from './order/order.component';
 import { SaleComponent } from './sale/sale.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { OrderDetailComponent } from './order/order-detail/order-detail.component';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -27,7 +29,10 @@ import { OrderDetailComponent } from './order/order-detail/order-detail.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

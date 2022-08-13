@@ -1,7 +1,7 @@
 {
-    "/customer/*": {
-      "target": "http://localhost:8080/",
+    "/client/*": {
+      "target": "http://localhost:9001/",
       "secure": false,
       "logLevel": "debug"
     }
-  }
+}

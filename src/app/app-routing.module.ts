@@ -9,14 +9,15 @@ import { ProductComponent } from './product/product.component';
 import { SaleComponent } from './sale/sale.component';
 
 const routes = [
-  {path: '', redirectTo: '/client', pathMatch: 'full'},
-  {path: 'client', component: ClientComponent},
+  {path: '', redirectTo: '/fclient', pathMatch: 'full'},
+  {path: 'fclient', component: ClientComponent},
   {path: 'client-detail', component: DetailClientComponent},
   {path: 'order', component: OrderComponent},
   {path: 'order-detail', component: OrderDetailComponent},
   {path: 'product', component: ProductComponent},
   {path: 'product-detail', component: ProductDetailComponent},
-  {path: 'sale', component: SaleComponent}
+  {path: 'sale', component: SaleComponent},
+  { path: '**', pathMatch: 'full', redirectTo: 'fclient' }
 ];
 
 

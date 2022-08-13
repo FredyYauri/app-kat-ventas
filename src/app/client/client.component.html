@@ -1,36 +1,52 @@
-<div class="card border-primary mb-3">
-  <div class="card-header">Clientes</div>
-  <div class="card-body text-primary">
-    <div class="row align-items-start">
-      <div class="col">
-        <h5 class="card-title">Listado de clientes</h5>
-      </div>
-      <div class="col">
-        <div class="card-body d-flex">
-          <button class="btn btn-rounded btn-success ml-auto" type="button" [routerLink]="['/client-detail']">
-            Nuevo Cliente
-          </button>
+<form autocomplete="off" [formGroup] = "forma">
+  <div class="card border-primary mb-3">
+    <div class="card-header">Clientes</div>
+    <div class="card-body text-primary">
+      <div class="row align-items-start">
+        <div class="col">
+          <h5 class="card-title">Listado de clientes</h5>
+        </div>
+        <div class="col">
+          <div class="card-body d-flex">
+            <button class="btn btn-rounded btn-success ml-auto" type="button" [routerLink]="['/client-detail']">
+              Nuevo Cliente
+            </button>
+          </div>
         </div>
       </div>
+      
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr class="text-center">
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Correo</th>
+            <th>
+              editar
+            </th>
+            <th>eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients; let i = index">
+            <td>{{ client.idClient }}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.lastName }}</td>
+            <td>{{ client.phone }}</td>
+            <td>{{ client.address }}</td>
+            <td>{{ client.email }}</td>
+            <td class="text-center">
+              <a class='btn btn-primary btn-rounded' (click)='editClient(client.idClient)'>editar</a>
+            </td>
+            <td class="text-center">
+              <a class='btn btn-danger btn-rounded'>eliminar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Teléfono</th>
-          <th>Dirección</th>
-          <th>Correo</th>
-          <th>
-            editar
-          </th>
-          <th>eliminar</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
   </div>
-</div>
+</form>
