@@ -17,4 +17,12 @@ export class ClientService {
   public SaveClient(client: Client){
     return this.httpClient.post("/client", client, {headers: this.httpHeaders})
   }
+
+  public GetClient(idClient: string){
+    return this.httpClient.get<any>("/client/" + idClient)
+  }
+
+  public UpdateClient(client: Client){
+    return this.httpClient.put("/client", client, {headers: this.httpHeaders})
+  }
 }

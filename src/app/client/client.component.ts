@@ -36,14 +36,11 @@ export class ClientComponent implements OnInit {
   loadClient(){
     this.clientService.GetCLients().subscribe(response => {
       this.clients = response.clients;
-      console.log(this.clients);
     })
   }
 
   editClient(idClient: string){
-    console.log(idClient);
-    localStorage.SetItem("idClient", idClient);
-    this.router.navigate(["client-detail"])
+    this.router.navigate(["client-detail", idClient]);
   }
 
 }

@@ -11,7 +11,7 @@ import { SaleComponent } from './sale/sale.component';
 const routes = [
   {path: '', redirectTo: '/fclient', pathMatch: 'full'},
   {path: 'fclient', component: ClientComponent},
-  {path: 'client-detail', component: DetailClientComponent},
+  {path: 'client-detail/:id', component: DetailClientComponent},
   {path: 'order', component: OrderComponent},
   {path: 'order-detail', component: OrderDetailComponent},
   {path: 'product', component: ProductComponent},
