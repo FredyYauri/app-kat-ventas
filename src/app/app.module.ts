@@ -13,6 +13,7 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import { OrderDetailComponent } from './order/order-detail/order-detail.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     OrderComponent,
     SaleComponent,
     ProductDetailComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@
         </div>
         <div class="col">
           <div class="card-body d-flex">
-            <button class="btn btn-rounded btn-success ml-auto" type="button" [routerLink]="['/product-detail']">
+            <button class="btn btn-rounded btn-success ml-auto" type="button" [routerLink]="['/product-detail/ ']">
               Nuevo Producto
             </button>
           </div>
@@ -16,7 +16,7 @@
       
       <table class="table table-bordered table-striped">
         <thead>
-          <tr>
+          <tr class="text-center">
             <th>Id</th>
             <th>Nombres</th>
             <th>Precio base</th>
@@ -28,6 +28,14 @@
           </tr>
         </thead>
         <tbody>
+          <tr *ngFor="let product of products">
+            <td> {{ product.idProduct }} </td>
+            <td> {{ product.name }} </td>
+            <td> {{ product.basePrice }} </td>
+            <td> {{ product.lot }} </td>
+            <td> <a class="btn btn-rounded btn-primary" (click)="editarProducto(product.idProduct)">Editar</a> </td>
+            <td> <a class="btn btn-rounded btn-danger" >Eliminar</a> </td>
+          </tr>
         </tbody>
       </table>
     </div>

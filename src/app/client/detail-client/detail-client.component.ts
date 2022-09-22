@@ -40,17 +40,18 @@ export class DetailClientComponent implements OnInit {
       this.idClient = parametro['id'];
       if (this.idClient.trim() != '')
         this.obtenerCliente(this.idClient);
+        
     });
   }
 
   public guardar(): void {
     if (typeof this.client != 'undefined' && this.client) {
       this.clientService.UpdateClient(this.forma.value).subscribe(
-        response => this.router.navigate(['/client'])
+        response => this.router.navigate(['/frmclient'])
       );
     } else {
       this.clientService.SaveClient(this.forma.value).subscribe(
-        response => this.router.navigate(['/client'])
+        response => this.router.navigate(['/frmclient'])
       )
     }
   }
@@ -58,6 +59,7 @@ export class DetailClientComponent implements OnInit {
   public obtenerCliente(idClient: string) {
     this.clientService.GetClient(idClient).subscribe(response => {
       this.forma.patchValue(response.client);
+      this.client = response.client
     }
     )
   }
