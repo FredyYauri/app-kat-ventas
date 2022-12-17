@@ -1,5 +1,5 @@
 <div class="card border-primary ">
-    <div class="card-header">Registrar Cliente</div>
+    <div class="card-header">Registrar Producto</div>
     <!--Input Size-->
     <!--===================================================-->
     <form class="form-horizontal" [formGroup]="forma" (ngSubmit)="guardar()" >
@@ -7,24 +7,31 @@
 
             <div class="row align-items-start">
                 <div class="col">
-                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Nombre Producto</label>
+                    <label for="demo-is-inputnormal" class="col-sm-12 control-label">Nombre Producto:</label>
                     <div class="col-sm-12">
                         <input class="form-control" type="text" placeholder="Ingrese Nombre Producto" 
                         formControlName="name">
                     </div>
                 </div>
                 <div class="col">
-                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Precio Base</label>
+                    <label for="demo-is-inputnormal" class="col-sm-12 control-label">Precio Base:</label>
                     <div class="col-sm-12">
                         <input class="form-control" type="text" placeholder="Ingrese Precio Base"
                             formControlName="basePrice">
                     </div>
                 </div>
                 <div class="col">
-                    <label for="demo-is-inputnormal" class="col-sm-3 control-label">Cantidad</label>
-                    <div class="col-sm-6">
-                        <input class="form-control" type="text" placeholder="Ingrese Cantidad" 
-                        formControlName="lot">
+                    <label for="demo-is-inputnormal" class="col-sm-12 control-label">Precio Venta:</label>
+                    <div class="col-sm-12">
+                        <input class="form-control" type="text" placeholder="Ingrese Precio Venta"
+                            formControlName="salePrice">
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="demo-is-inputnormal" class="col-sm-12 control-label">Duracón Estimada (días):</label>
+                    <div class="col-sm-12">
+                        <input class="form-control" type="text" placeholder="Ingrese Días de Duración" 
+                        formControlName="duration">
                     </div>
                 </div>
             </div>

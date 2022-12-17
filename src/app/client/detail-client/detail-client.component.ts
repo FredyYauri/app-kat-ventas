@@ -31,7 +31,8 @@ export class DetailClientComponent implements OnInit {
       lastName: [''],
       phone: [''],
       address: [''],
-      email: ['']
+      email: [''],
+      status: ['']
     });
   }
 

@@ -8,6 +8,7 @@ import { OrderComponent } from './order/order.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductComponent } from './product/product.component';
 import { SaleComponent } from './sale/sale.component';
+import { DetailSaleComponent } from './sale/detail-sale/detail-sale.component'
 
 const routes = [
   {path: '', redirectTo: '/frmhome', pathMatch: 'full'},
@@ -19,6 +20,7 @@ const routes = [
   {path: 'frmproduct', component: ProductComponent},
   {path: 'product-detail/:id', component: ProductDetailComponent},
   {path: 'frmsale', component: SaleComponent},
+  {path: 'sale-detail', component: DetailSaleComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'frmhome' }
 ];
 

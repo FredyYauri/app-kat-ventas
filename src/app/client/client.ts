@@ -6,5 +6,5 @@ export class Client {
     phone: string;
     createAt: string;
     address: string;
-    statis: string;
+    status: string;
 }

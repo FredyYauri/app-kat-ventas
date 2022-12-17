@@ -13,10 +13,10 @@ export class ClientComponent implements OnInit {
 
   constructor(private clientService: ClientService, private fb: FormBuilder, private router: Router) {
     this.crearFormulario();
-    this.loadClient();
    }
 
   ngOnInit(): void {
+    this.loadClient();
   }
 
   crearFormulario(){
@@ -41,6 +41,13 @@ export class ClientComponent implements OnInit {
 
   editClient(idClient: string){
     this.router.navigate(["client-detail", idClient]);
+  }
+
+  deleteClient(client: Client){
+    client.status = "0";
+    this.clientService.UpdateClient(client).subscribe(response => {
+      this.ngOnInit();
+    })
   }
 
 }

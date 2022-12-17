@@ -1,0 +1,15 @@
+.contentBtnForm{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.btnForm{
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.dataCLient p{
+    margin: 0 !important;
+}

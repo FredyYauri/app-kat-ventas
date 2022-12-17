@@ -3,7 +3,7 @@
     <div class="card-body text-primary">
       <div class="row align-items-start">
         <div class="col">
-          <h5 class="card-title">Listado de Productos</h5>
+          <h3 class="card-title">Listado de Productos</h3>
         </div>
         <div class="col">
           <div class="card-body d-flex">
@@ -20,7 +20,9 @@
             <th>Id</th>
             <th>Nombres</th>
             <th>Precio base</th>
-            <th>Cantidad</th>
+            <th>Precio Venta</th>
+            <th>Duración (días)</th>
+            <th>Cantidad Stock</th>
             <th>
               editar
             </th>
@@ -29,12 +31,14 @@
         </thead>
         <tbody>
           <tr *ngFor="let product of products">
-            <td> {{ product.idProduct }} </td>
+            <td style="text-align: center;"> {{ product.idProduct }} </td>
             <td> {{ product.name }} </td>
-            <td> {{ product.basePrice }} </td>
-            <td> {{ product.lot }} </td>
-            <td> <a class="btn btn-rounded btn-primary" (click)="editarProducto(product.idProduct)">Editar</a> </td>
-            <td> <a class="btn btn-rounded btn-danger" >Eliminar</a> </td>
+            <td style="text-align: center;"> {{ product.basePrice }} </td>
+            <td style="text-align: center;"> {{ product.salePrice }} </td>
+            <td style="text-align: center;"> {{ product.duration }} </td>
+            <td style="text-align: center;"> {{ product.lot }} </td>
+            <td style="text-align: center;"> <a class="btn btn-rounded btn-primary" (click)="editarProducto(product.idProduct)">Editar</a> </td>
+            <td style="text-align: center;"> <a class="btn btn-rounded btn-danger" (click)="eliminarProducto(product)">Eliminar</a> </td>
           </tr>
         </tbody>
       </table>

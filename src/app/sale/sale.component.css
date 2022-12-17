@@ -1,0 +1,10 @@
+.headerForm{
+    display: flex;
+    align-items: center !important;
+}
+
+.btn-header{
+    align-items: center;
+    justify-content: right;
+}
+
